@@ -1,0 +1,54 @@
+.header {
+    text-align: center;
+    margin-top: 10px;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    img {
+        width: 50px;
+        display: block;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        cursor: pointer;
+        position: relative;
+        display: inline;
+
+        &::before {
+            content: "";
+            width: 100%;
+            position: absolute;
+            height: 5px;
+            background: $cl__txt;
+            bottom: -10px;
+            transform-origin: 0;
+            transform: scaleX(0);
+            opacity: 0;
+        }
+        &:hover::before {
+            animation: underline 1.2s 0s ease-in-out forwards;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 2.7rem;
+        }
+    }
+    p {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes underline {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    100% {
+        opacity: 1;
+        transform-origin: 150%;
+        transform: scaleX(1);
+    }
+}

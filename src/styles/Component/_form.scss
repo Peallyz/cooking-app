@@ -1,0 +1,16 @@
+.form {
+    display: flex;
+    justify-content: center;
+    input {
+        height: 40px;
+        width: 320px;
+        padding: 5px;
+        border-radius: 10px;
+        border: 2px solid $cl__txt;
+        font-size: 1rem;
+        color: $cl__txt;
+        &:focus {
+            border: 2px solid $cl__border;
+        }
+    }
+}
